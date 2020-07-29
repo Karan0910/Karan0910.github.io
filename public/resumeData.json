@@ -72,13 +72,13 @@
     ],
     "work":[
       {
-        "company":"Mobile Application developer",
-        "title":"Senior UX God ",
+        "company":"Lightwave Technology, Montreal, Canada",
+        "title":"Mobile Application developer",
         "years":"March 2019 - Present",
         "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
       },
       {
-        "company":"CodeDrill InfoTech",
+        "company":"CodeDrill InfoTech, Mohali, India",
         "title":"Junior Mobile Application Developer",
         "years":"August 2017 - August 2018",
         "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
@@ -152,12 +152,12 @@
   "testimonials":{
     "testimonials":[
       {
-        "text":"Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
-        "user":"Kareem Abdul Jabbar"
+        "text":"",
+        "user":""
       },
       {
-        "text":"That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
-        "user":"Steve Wozniak... impersonator"
+        "text":"",
+        "user":""
       }
     ]
   }
