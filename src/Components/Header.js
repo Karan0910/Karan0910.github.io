@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Typical from 'react-typical'
 
 class Header extends Component {
   render() {
@@ -34,7 +35,13 @@ class Header extends Component {
 
       <div className="row banner">
          <div className="banner-text">
-            <h1 className="responsive-headline">I'm {name}.</h1>
+            <h1 className="responsive-headline">I'm {name}.
+            <Typical
+               steps={['Hello', 2000, 'I\'m '+name+".", 5000]}
+               loop={Infinity}
+               wrapper="p"
+            /></h1>
+            
             <h3>I'm a {city} based <span>{occupation}</span>. {description}.</h3>
             <hr />
             <ul className="social">
