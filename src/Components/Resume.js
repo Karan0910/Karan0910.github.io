@@ -28,7 +28,7 @@ class Resume extends Component {
       var work = this.props.data.work.map(function(work){
         return <div key={work.company}><h3>{work.company}</h3>
             <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
-            <ul>{companyDescription(work)}</ul>
+            <ul><b>{companyDescription(work)}</b></ul>
              </div>
           
       })
@@ -96,7 +96,8 @@ class Resume extends Component {
 
 				<div className="bars">
 				   <ul className="skills">
-					  {skills}
+					  {/* {skills} */} 
+            <b>Mobile Application Developer | Android | Java | Kotlin | Dagger 2 | RxJava | MVVM | MVP | React Native | JavaScript | ES6 | Redux | React JS | </b>
 					</ul>
 				</div>
 			</div>
