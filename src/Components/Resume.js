@@ -10,12 +10,42 @@ class Resume extends Component {
         <p className="info">{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
         <p>{education.description}</p></div>
       })
+   
+      const companyDescription=(props)=>{
+        return (
+          props.description.map(el=>{
+            return (
+              <ul>
+                <li>{el}</li>
+              </ul>
+            );
+          })
+        );
+      }
+
+     
+      
       var work = this.props.data.work.map(function(work){
         return <div key={work.company}><h3>{work.company}</h3>
             <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
-            <p>{work.description}</p>
-        </div>
+            <ul>{companyDescription(work)}</ul>
+             </div>
+          
       })
+      // console.log(companyDescription(work));
+   
+
+
+     
+
+    
+
+      // var col = (props) => function workDescription(props) {
+        
+        
+      // }
+
+
       var skills = this.props.data.skills.map(function(skills){
         var className = 'bar-expand '+skills.name.toLowerCase();
         return <li key={skills.name}><span style={{width:skills.level}}className={className}></span><em>{skills.name}</em></li>

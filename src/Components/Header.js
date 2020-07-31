@@ -35,12 +35,14 @@ class Header extends Component {
 
       <div className="row banner">
          <div className="banner-text">
-            <h1 className="responsive-headline">I'm {name}.
-            <Typical
-               steps={['Hello', 2000, 'I\'m '+name+".", 5000]}
-               loop={Infinity}
+          <h1>{/*  className="responsive-headline">I'm {name}. */}
+          <Typical
+               steps={['Hello', 2000, 'I\'m Karan Sharma', 1000]}
+               loop={1}
                wrapper="p"
-            /></h1>
+            />
+            </h1>
+            
             
             <h3>I'm a {city} based <span>{occupation}</span>. {description}.</h3>
             <hr />

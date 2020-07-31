@@ -1,6 +1,63 @@
 import React, { Component } from 'react';
-
+import emailjs from 'emailjs-com';
+import {toast} from 'react-toastify';
 class Contact extends Component {
+
+   sendMessage(event) {
+      console.log("asdfasf")
+      event.preventDefault();
+      // if (!this.validateMail()) {
+      //   return;
+      // }
+  const templateParams = {
+        from_name: this.state.contactName +"/"+this.state.contactSubject+ " (" + this.state.contactEmail + ")",
+        to_name:"Karan Sharma",
+        message_html: this.state.feedback
+      };
+  emailjs
+        .send("gmail", "template_NgLpmvSa", templateParams, "user_2nD2tvQLaBsDRENeVCmns")
+        .then(
+          function(response) {
+             
+            toast.success("Your message has successfully sent!", {
+              position: toast.POSITION.BOTTOM_CENTER
+            });
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          function(err) {
+            
+            toast.error("Your message was not able to be sent");
+          }
+        );
+         this.setState({
+            contactName: "",
+            contactEmail: "",
+            contactSubject: "",
+            feedback: "",
+               });
+    }
+
+   constructor(props) {
+      super(props);
+      this.state = {
+        contactName: "",
+        contactEmail: "",
+        contactSubject:"",
+        feedback: "",
+      };
+    }
+  handleInputChange(event) {
+      event.preventDefault();
+      
+      const target = event.target;
+      const name = target.name;
+      const value = target.value;
+      console.log(name)
+      console.log(value)
+
+      this.setState({ [name]: value });
+    }
+
   render() {
 
     if(this.props.data){
@@ -40,27 +97,30 @@ class Contact extends Component {
 					<fieldset>
 
                   <div>
-						   <label htmlFor="contactName">Name <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={this.handleChange}/>
+						   <label id="name"
+            name="name" htmlFor="contactName">Name <span className="required">*</span></label>
+						   <input type="text" defaultValue="" size="35"  value={this.state.contactName} id="contactName" name="contactName" onChange={this.handleInputChange.bind(this)}/>
                   </div>
 
                   <div>
-						   <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange}/>
+						   <label  id="email"
+            name="email" htmlFor="contactEmail">Email <span className="required">*</span></label>
+						   <input type="text" value={this.state.contactEmail} defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleInputChange.bind(this)}/>
                   </div>
 
                   <div>
 						   <label htmlFor="contactSubject">Subject</label>
-						   <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={this.handleChange}/>
+						   <input type="text"  defaultValue="" value={this.state.contactSubject} size="35" id="contactSubject" name="contactSubject" onChange={this.handleInputChange.bind(this)}/>
                   </div>
 
                   <div>
                      <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                     <textarea cols="50" rows="15" id="feedback"
+            name="feedback"  value={this.state.feedback} onChange={this.handleInputChange.bind(this)} ></textarea>
                   </div>
 
                   <div>
-                     <button className="submit">Submit</button>
+                     <button  onClick={this.sendMessage.bind(this)} className="submit">Submit</button>
                      <span id="image-loader">
                         <img alt="" src="images/loader.gif" />
                      </span>
@@ -87,7 +147,7 @@ class Contact extends Component {
 					   </p>
 				   </div>
 
-               <div className="widget widget_tweets">
+               {/* <div className="widget widget_tweets">
                   <h4 className="widget-title">Latest Tweets</h4>
                   <ul id="twitter">
                      <li>
@@ -107,7 +167,7 @@ class Contact extends Component {
                         <b><a href="#">3 Days Ago</a></b>
                      </li>
                   </ul>
-		         </div>
+		         </div> */}
             </aside>
       </div>
    </section>

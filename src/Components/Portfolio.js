@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import Typical from 'react-typical'
+            
+       
 
 class Portfolio extends Component {
+
+  componentDidMount() {
+    this.setState({conentWrapperMinHeight: "600px"})
+}
   render() {
 
     if(this.props.data){
@@ -23,18 +30,28 @@ class Portfolio extends Component {
       })
     }
 
+    
+
     return (
-      <section id="portfolio">
+      <section id="header">
 
       <div className="row">
 
-         <div className="twelve columns collapsed">
+         <div className="ten columns flex-container">
 
             <h1>Check Out Some of My Works.</h1>
 
             <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
-                {projects}
+                
             </div>
+
+            <h1>{/*  className="responsive-headline">I'm {name}. */}
+          <Typical
+               steps={['Coming soon ...', 2000]}
+               loop={1}
+               wrapper="p"
+            />
+            </h1>
           </div>
       </div>
    </section>
