@@ -4,8 +4,8 @@
     "occupation":"Mobile Application Developer",
     "description":"I have recently graduated in Masters of Software Engineering from Concordia University, Montrel, Quebec",
     "image":"profilepic.png",
-    "bio":"Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
-    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "bio":"Committed and dedicated software professional with 3 years of experience in Agile software development and maintenance. \n  I love the fact that technologies change people's life. So I've been spending one third of my life on exploring information technology industry with my keyboard. This website is where I post my works, feel free to explore by yourself.",
+    "contactmessage":"Feel free to contact me through email..",
     "email": "95sharma.karan@gmail.com",
     "phone": "514-663-7993",
     "address":{
@@ -17,40 +17,17 @@
     "website": "https://karan0910.github.io/",
     "resumedownload":"https://karan0910.github.io/",
     "social":[
-      {
-        "name":"facebook",
-        "url":"http://facebook.com/",
-        "className":"fa fa-facebook"
-      },
-      {
-        "name":"twitter",
-        "url":"http://twitter.com",
-        "className":"fa fa-twitter"
-      },
-      {
-        "name":"google-plus",
-        "url":"http://googleplus.com/",
-        "className":"fa fa-google-plus"
-      },
+      
       {
         "name":"linkedin",
         "url":"https://www.linkedin.com/in/Karan0910/",
         "className":"fa fa-linkedin"
       },
-      {
-        "name":"instagram",
-        "url":"http://instagram.com/Karan.bhardvaj",
-        "className":"fa fa-instagram"
-      },
+      
       {
         "name":"github",
         "url":"http://github.com/Karan0910",
         "className":"fa fa-github"
-      },
-      {
-        "name":"skype",
-        "url":"http://skype.com",
-        "className":"fa fa-skype"
       }
     ]
   },
@@ -75,13 +52,47 @@
         "company":"Lightwave Technology, Montreal, Canada",
         "title":"Mobile Application developer",
         "years":"March 2019 - Present",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "description":[
+          "-Worked in agile scrum, worked collaboratively with other developers, data analysts, product owners to challenge the status quo and improve the lives of our customers, one release after the other."
+          ,"-Participating code reviews and addressed review comments.",
+          "-Implemented MVP and MVVM architecture to handle complex code and providing code modularity.",
+          "-Manage multiple priorities and deadlines in a dynamic, fast-paced environment.",
+          "-Continuous integration and development of application. Updated the continuous integration/deployment scripts as necessary for integration processes." ,
+          "-Improve the algorithm for the video streaming over the stream of data received."
+
+        ]
       },
       {
         "company":"CodeDrill InfoTech, Mohali, India",
         "title":"Junior Mobile Application Developer",
         "years":"August 2017 - August 2018",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "description":[
+          "-Developed application for news readers and allow users to publish news articles with 2k-3k active users with 4.7/5 rating.",
+"-Users are able to customize the news feeds according to their taste.",
+	"-Build complex application architecture using RxJava and Dagger.",
+"-Worked closely with product owner to customize the application.",
+"-Implemented push notification. ",
+"-Collaborated with QA on identifying bugs and implementing fixes and minor application enhancements.",
+"-Participated in design and wireframe review to provide a technical perspective on implementation."
+
+
+
+        ]
+      },
+      {
+        "company":"Vlogic Labs Private limited, India",
+        "title":"Intern Application Developer",
+        "years":"January 2017-July 2017",
+        "description":[
+          "-Developed a food delivery application for the food fanatics those can search for restaurant within the area of 10km and order for the food."
+          ,"-Consumed Payment gateway API for secured and successful transactions."
+          ,"-Increased customer satisfaction rate by 20% and application ratings from 3.7 to 4.2/5 by resolving issues based on customer feedback."
+          ,	"-Participated in agile software development with daily scrum meetings and bi-weekly sprints." 
+          
+
+
+
+        ]
       }
     ],
     "skills":[
